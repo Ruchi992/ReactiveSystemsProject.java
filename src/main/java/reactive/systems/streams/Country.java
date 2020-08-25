@@ -49,6 +49,10 @@ public class Country {
         return area;
     }
 
+	public double getPopulationDensity()
+	{
+		return population /area;
+	}
     public double getPopulation() {
         return population;
     }

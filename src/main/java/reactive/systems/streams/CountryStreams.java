@@ -5,6 +5,7 @@
  */
 package reactive.systems.streams;
 
+import io.reactivex.functions.Function;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -102,18 +103,13 @@ public class CountryStreams {
 				.collect(Collectors.toMap(Country::getName, Country::getPopulation));
 		System.out.println("countryNamePopulationMap" + countryNamePopulationMap.toString());
 
-		
-		
-//   List <Country> streamSelectedCountries = Countries.Streams().collect(Collectors.toMap(Country:: getName, Country::getPopulation));
-//    System.out.prinln(streamSelectedCountries);
 		//************************************************************************
 		//Convert the stream of countries to a map with key of country name and value of poulation density (people per 1km^2) 
 		//Check your sums here https://www.worldometers.info/world-population/austria-population/
 		//See tutorial; on conmverting streams to maps here https://www.amitph.com/convert-list-to-map-using-streams/
-//  List<Country> listPopulationMoreThanOneMillion(List<Country> countries) {
-//         countries.fromIterable(countries).filter(ctry -> ctry.population>1000000);
-//    
-//    
-//    }
+		var countryNamePopulationDensityMap = countries.stream()
+				.collect(Collectors.toMap(Country::getName, Country::getPopulationDensity));
+		System.out.println("countryNamePopulationDensityMap" + countryNamePopulationDensityMap.toString());
+
 	}
 }
