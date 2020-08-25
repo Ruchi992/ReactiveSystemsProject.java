@@ -27,8 +27,7 @@ public class DealsPublisher implements Subject{
 		in = new Scanner(System.in);
     }
 
-	DealsPublisher() {
-		//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	public DealsPublisher() {
 	}
     
     @Override

@@ -19,10 +19,6 @@ public class DealsSubscriber implements Observer {
     public DealsSubscriber(String name){
         this.name =name;
     }
-
-	DealsSubscriber() {
-		//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-	}
     
     @Override
     public void update(String update) {
