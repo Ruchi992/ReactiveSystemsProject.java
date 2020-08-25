@@ -41,7 +41,7 @@ public class Country {
         return name;
     }
 
-    public String getCapital() {
+    public String getCapitalCity() {
         return capital;
     }
 

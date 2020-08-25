@@ -65,7 +65,7 @@ public class CountryStreams {
 		System.out.println("streamSelectedCountry" + streamSelectedCountries.toString());
 
 		List<String> streamSelectedCapitalNames
-				= countries.stream().filter(country -> country.getPopulation() > 20).map(country -> country.getCapital()).collect(Collectors.toList());
+				= countries.stream().filter(country -> country.getPopulation() > 20).map(country -> country.getCapitalCity()).collect(Collectors.toList());
 
 		System.out.println("streamSelectedCapitalNames" + streamSelectedCapitalNames.toString());
 
@@ -81,7 +81,7 @@ public class CountryStreams {
 		List<Country> euCountriesWithCapitalCitiesBeginingWithL;
 
 		euCountriesWithCapitalCitiesBeginingWithL = countries.stream()
-				.filter(country -> country.isEuMember() && country.getCapital().startsWith("L"))
+				.filter(country -> country.isEuMember() && country.getCapitalCity().startsWith("L"))
 				.collect(Collectors.toList());
 		System.out.println("euCountriesWithCapitalCitiesBeginingWithL" + euCountriesWithCapitalCitiesBeginingWithL.toString());
 
@@ -90,7 +90,7 @@ public class CountryStreams {
 		//are in the EU and whose capitals begin with L
 		List<String> euCountryNamesWithCapitalCitiesBeginingWithL;
 		euCountryNamesWithCapitalCitiesBeginingWithL = countries.stream()
-				.filter(country -> country.isEuMember() && country.getCapital().startsWith("L"))
+				.filter(country -> country.isEuMember() && country.getCapitalCity().startsWith("L"))
 				.map(country -> country.getName())
 				.collect(Collectors.toList());
 
